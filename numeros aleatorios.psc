@@ -6,7 +6,7 @@ FinAlgoritmo
 
 Funcion imprimirVector(vector,tam)
 	para i=1 Hasta tam Hacer
-		Escribir vector(i)
+		Escribir i " : " vector(i)
 	FinPara
 FinFuncion
 
