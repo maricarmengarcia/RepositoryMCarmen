@@ -4,13 +4,12 @@ Algoritmo sin_titulo
 	Dimension vocales[tam]
 	rellenarAleatoriamente(vocales,tam)
 	imprimirVector(vocales,tam)
-	a=mediaVector(vocales,tam)
-	Escribir 'La media es ' a
+	media <- mediaVector(vocales,tam)
 FinAlgoritmo
 
 Funcion imprimirVector(vector,tam)
 	Para i<-1 Hasta tam Hacer
-		Escribir i " : " vector(i)
+		Escribir i,' : ',vector[i]
 	FinPara
 FinFuncion
 
@@ -20,7 +19,12 @@ Funcion rellenarAleatoriamente(vector,tam)
 	FinPara
 FinFuncion
 
-Funcion rsdo=mediaVector(vector,tam)
-	rsdo= 0
+Funcion rsdo = mediaVector(vector,tam)
+	suma <- 0
+	Para i<-1 Hasta tam Hacer
+		suma <- suma + vector(i)
+	FinPara
+	media <- suma/tam
+	Escribir 'La media es ' media
 FinFuncion
-	
+
