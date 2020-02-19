@@ -1,0 +1,27 @@
+Algoritmo sin_titulo
+	Escribir 'Cuántas filas tiene la matriz?'
+	Leer numF
+	Escribir 'Cuántas columnas tiene la matriz?'
+	Leer numC
+	Escribir 'Quiéres imprimir la matriz?'
+	Leer respuesta
+	respuesta <- Minusculas(respuesta)
+	Segun respuesta Hacer
+		'si' o 'sí':
+			Dimension notas[numF,numC]
+			imprimirMatriz(notas,numF,numC)
+		De Otro Modo:
+			Escribir 'Otra vez será...'
+	FinSegun
+FinAlgoritmo
+
+Funcion imprimirMatriz(m,numF,numC)
+	Para i<-1 Hasta numF Hacer
+		Para J<-1 Hasta numC Hacer
+			m[i,J]<-aleatorio(0,9)
+			Escribir m[i,J],' ' Sin Saltar
+		FinPara
+		Escribir ''
+	FinPara
+FinFuncion
+
