@@ -3,7 +3,7 @@ Algoritmo sin_titulo
 	Leer numF
 	Escribir 'Cuántas columnas tiene la matriz?'
 	Leer numC
-	Escribir 'Quiéres imprimir la matriz?'
+	Escribir 'Quieres imprimir la matriz?'
 	Leer respuesta
 	respuesta <- Minusculas(respuesta)
 	Segun respuesta Hacer

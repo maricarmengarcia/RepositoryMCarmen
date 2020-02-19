@@ -4,16 +4,22 @@ Algoritmo sin_titulo
 	Escribir 'Cuántas columnas tiene la matriz?'
 	Leer numC
 	Dimension notas[numF,numC]
-	imprimirMatriz(notas,numF,numC)
-	
+	imprimirMatriz(notas,numF,numC,imp)
 FinAlgoritmo
 
-Funcion imprimirMatriz(m,numF,numC)
+Funcion imprimirMatriz(m,numF,numC,imp)
+	Escribir 'Quieres imprimirla?'
+	Leer imp
+	imp <- Minúsculas(imp)
 	Para i<-1 Hasta numF Hacer
 		Para j<-1 Hasta numC Hacer
-			m(i,j)<-aleatorio(0,9)
-			Escribir m(i,J) ' ' sin saltar
+			m[i,j]<-aleatorio(0,9)
+			Segun imp Hacer
+				'si' o 'sí':
+					Escribir m[i,j],' 'sin saltar Sin Saltar
+			FinSegun
 		FinPara
 		Escribir ''
 	FinPara
 FinFuncion
+
