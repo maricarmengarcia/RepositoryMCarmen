@@ -36,6 +36,6 @@ $n->tipo="no perecedero"
 
 echo "Soy " . $n->nombre . "\n";
 
-$j->verificar(" no perecedero");
+$j->verificar("no perecedero");
 
 ?>
