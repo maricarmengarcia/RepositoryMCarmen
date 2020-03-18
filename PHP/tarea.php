@@ -3,6 +3,7 @@
 class comida {
 	public $tipo;
 	public $nombre;
+	public static $contador = 0;
 	
 	function verificar ($tipo){
 		if($tipo==$this->tipo){
@@ -12,25 +13,34 @@ class comida {
 			}
 	}
 	public function __construct($tipo) {
+		self::$contador++;
 	  $this->tipo=$tipo;
 	  echo "Empiezo a vivir\n";
   } 
-  
+	public function nombrar($j){
+	  echo "Soy " . $this->nombre . "\n";
+  }
+	class Administrador extends comida {
+	  public function eliminar($n){
+		  echo $this->nombre . " ha sido eliminado";
+	}
+  }
 	public function __destruct() {
 	  echo "Hasta siempre\n";
   } 
 }
 echo "Aquí empieza el programa\n";
 
-$j=new nombre("no perecedero");
+$j=new comida("no perecedero");
+echo comida::$contador; // 1
 $j->nombre="Legumbre";
 $j->tipo="no perecedero";
 
-echo "Soy " . $j->nombre . "\n";
 
 $j->verificar("perecedero");
 
-$n=new nombre("no perecedero");
+$n=new comida("no perecedero");
+echo comida::$contador; // 2
 $n->nombre="Azucar";
 $n->tipo="no perecedero";
 
