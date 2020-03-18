@@ -32,7 +32,7 @@ $j->verificar("perecedero");
 
 $n=new nombre("no perecedero");
 $n->nombre="Azucar";
-$n->tipo="no perecedero"
+$n->tipo="no perecedero";
 
 echo "Soy " . $n->nombre . "\n";
 
