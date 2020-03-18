@@ -12,7 +12,7 @@ class comida {
 			}
 	}
 	public function __construct($tipo) {
-	  $this->clave=$tipo;
+	  $this->tipo=$tipo;
 	  echo "Empiezo a vivir\n";
   } 
   
@@ -22,15 +22,17 @@ class comida {
 }
 echo "Aquí empieza el programa\n";
 
-$j=new nombre(" no perecedero");
+$j=new nombre("no perecedero");
 $j->nombre="Legumbre";
+$j->tipo="no perecedero";
 
 echo "Soy " . $j->nombre . "\n";
 
 $j->verificar("perecedero");
 
-$n=new nombre(" no perecedero");
+$n=new nombre("no perecedero");
 $n->nombre="Azucar";
+$n->tipo="no perecedero"
 
 echo "Soy " . $n->nombre . "\n";
 
